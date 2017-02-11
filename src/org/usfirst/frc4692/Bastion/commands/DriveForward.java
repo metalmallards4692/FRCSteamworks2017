@@ -13,13 +13,13 @@ public class driveforward extends Command {
     	drive.start();
     }
     protected void execute() {
-    	Robot.drivetrain.driveForward();
+    	Robot.drivetrain.driveStraight(3.0);
     }
     protected boolean isFinished() {
-        return (drive.get()>5);
+        return (drive.get()>2);
     }
     protected void end() {
-    	Robot.drivetrain.stop();
+    	Robot.drivetrain.driveStraight(0);
     }
     protected void interrupted() {
     }

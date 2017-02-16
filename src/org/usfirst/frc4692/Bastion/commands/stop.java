@@ -3,17 +3,15 @@ package org.usfirst.frc4692.Bastion.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4692.Bastion.Robot;
 
-public class Flipdown extends Command {
-    public Flipdown() {
+public class stop extends Command {
+    public stop() {
         requires(Robot.ballstuff);
     }
     protected void initialize() {
-    	Robot.ballstuff.Retract();
-    	Robot.ballstuff.beltup();
+    	Robot.ballstuff.beltstop();
     }
     protected void execute() {
-    	Robot.ballstuff.Retract();	
-    	Robot.ballstuff.beltup();
+    	Robot.ballstuff.beltstop();
     }
     protected boolean isFinished() {
         return false;

@@ -10,7 +10,6 @@ public class Gear extends Subsystem {
     private final DoubleSolenoid slide = RobotMap.gearSlide;
     private final DoubleSolenoid spit = RobotMap.gearSpit;
     public void initDefaultCommand() {
-    	setDefaultCommand(new SlideExtend());
     	setDefaultCommand(new Gearin());
     }
     	public void Extend(){

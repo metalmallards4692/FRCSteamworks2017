@@ -6,19 +6,23 @@ import org.usfirst.frc4692.Bastion.Robot;
 public class Flipup extends Command {
 
     public Flipup() {
-        requires(Robot.toggle);
+        requires(Robot.ballstuff);
     }
     protected void initialize() {
-    	Robot.toggle.Extend();
+    	Robot.ballstuff.Extend();
+    	Robot.ballstuff.beltup();
+    	Robot.ballstuff.agitator();
     }
     protected void execute() {
-    	Robot.toggle.Extend();	
+    	Robot.ballstuff.Extend();
+    	Robot.ballstuff.beltup();
+    	Robot.ballstuff.agitator();
     }
     protected boolean isFinished() {
         return false;
     }
     protected void end() {
-    	Robot.toggle.Stop();
+    	Robot.ballstuff.beltstop();
     }
     protected void interrupted() {
     }

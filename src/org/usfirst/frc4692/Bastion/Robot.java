@@ -16,7 +16,6 @@ public class Robot extends IterativeRobot {
     public static drivetrain drivetrain;
     public static Winch winch;
     public static Ballstuff ballstuff;
-    public static Toggle toggle;
     public static Gear gear;
     public static shift shift;
     
@@ -26,7 +25,6 @@ public class Robot extends IterativeRobot {
         drivetrain = new drivetrain();
         winch = new Winch();
         ballstuff = new Ballstuff();
-        toggle = new Toggle();
         gear = new Gear();
         Autonomous = new Autonomous();
         oi = new OI();  

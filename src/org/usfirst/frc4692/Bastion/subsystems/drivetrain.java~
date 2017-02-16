@@ -30,7 +30,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 			drive.drive(3.0, 3.0);
     }
     	public void driveforward() {
-    		drive.setLeftRightMotorOutputs(3.0,-3.0);
+    		drive.setLeftRightMotorOutputs(-3.0,3.0);
     }
     	public void driveForward(){
     		drive.tankDrive(autoSpeed, autoSpeed);//autoSpeed is a command for autonomous that runs the motors

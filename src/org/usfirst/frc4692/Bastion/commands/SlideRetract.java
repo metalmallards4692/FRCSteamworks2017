@@ -3,23 +3,21 @@ package org.usfirst.frc4692.Bastion.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4692.Bastion.Robot;
 
-public class Flipdown extends Command {
-    public Flipdown() {
-        requires(Robot.ballstuff);
+public class SlideRetract extends Command {
+    public SlideRetract() {
+        requires(Robot.gear);
     }
     protected void initialize() {
-    	Robot.ballstuff.Retract();
-    	Robot.ballstuff.beltup();
+    	Robot.gear.Retract();
     }
     protected void execute() {
-    	Robot.ballstuff.Retract();	
-    	Robot.ballstuff.beltup();
+    	Robot.gear.Retract();
     }
     protected boolean isFinished() {
         return false;
     }
     protected void end() {
-    	Robot.ballstuff.beltstop();
+    	Robot.gear.Stop();
     }
     protected void interrupted() {
     }

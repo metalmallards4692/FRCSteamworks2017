@@ -12,13 +12,13 @@ public class OI {
     public Joystick joystick2;
     public Joystick gamepad;
     public JoystickButton lift;
-    public JoystickButton belt;
     public JoystickButton hoodflipup;
     public JoystickButton hoodflipdown;
     public JoystickButton gearEject;
-    public JoystickButton beltstop;
-    public JoystickButton  shiftdown;
-    public JoystickButton  shiftup;
+    public JoystickButton shiftdown;
+    public JoystickButton shiftup;
+    public JoystickButton gearslidein;
+    public JoystickButton gearslideout;
     
     public OI() {
         
@@ -27,26 +27,25 @@ public class OI {
         gamepad = new Joystick(2);
         gearEject = new JoystickButton(gamepad, 3);
         gearEject.whileHeld(new Spitgear());
-        belt = new JoystickButton(gamepad, 5);
-        belt.whenPressed(new ballbelt());
         hoodflipdown = new JoystickButton(gamepad, 1);
-        hoodflipdown.whenPressed(new Flipdown());
+        hoodflipdown.whileHeld(new Flipdown());
         hoodflipup = new JoystickButton(gamepad, 4);
-        hoodflipup.whenPressed(new Flipup());
+        hoodflipup.whileHeld(new Flipup());
         lift = new JoystickButton(gamepad, 2);
         lift.whileHeld(new Climb());
-        beltstop = new JoystickButton(gamepad, 6);
-        beltstop.whenPressed(new beltstop());
         shiftup = new JoystickButton(joystick1, 1);
         shiftup.whenPressed(new upshift());
         shiftdown = new JoystickButton(joystick2, 1);
         shiftdown.whenPressed(new downshift());
+        gearslidein = new JoystickButton(gamepad, 5);
+        gearslidein.whenPressed(new SlideRetract());
+        gearslideout = new JoystickButton(gamepad, 6);
+        gearslideout.whenPressed(new SlideExtend());
         
         SmartDashboard.putData("Autonomous", new Autonomous());
         SmartDashboard.putData("DriveWithJoysticks", new DriveWithJoysticks());
         SmartDashboard.putData("Climb", new Climb());
         SmartDashboard.putData("Flip up", new Flipup());
-        SmartDashboard.putData("ballbelt", new ballbelt());
         SmartDashboard.putData("Flip down", new Flipdown());
         SmartDashboard.putData("Spitgear", new Spitgear());
         SmartDashboard.putData("Slide Extend", new SlideExtend());

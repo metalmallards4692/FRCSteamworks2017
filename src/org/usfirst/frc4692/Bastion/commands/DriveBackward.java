@@ -6,11 +6,11 @@ import org.usfirst.frc4692.Bastion.Robot;
 public class DriveBackward extends Command {
     public DriveBackward() {
         requires(Robot.drivetrain);
-    	double incrimentRunTime = Robot.drivetrain.runTimeBackward;
-    	setTimeout(incrimentRunTime);
+    	//double incrimentRunTime = Robot.drivetrain.runTimeBackward;
+    	//setTimeout(incrimentRunTime);
     }
     protected void initialize() {
-    	Robot.drivetrain.driveBackward();
+    	//Robot.drivetrain.driveBackward();
     }
     protected void execute() {
     }

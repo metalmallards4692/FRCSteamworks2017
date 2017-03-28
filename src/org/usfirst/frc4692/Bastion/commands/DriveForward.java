@@ -16,7 +16,7 @@ public class driveforward extends Command {
     	Robot.drivetrain.driveStraight(1.0);
     }
     protected boolean isFinished() {
-        return (drive.get()>2);
+        return (drive.get()>2.0);
     }
     protected void end() {
     	Robot.drivetrain.driveStraight(0);

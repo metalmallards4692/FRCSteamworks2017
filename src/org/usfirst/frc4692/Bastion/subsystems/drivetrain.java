@@ -13,11 +13,12 @@ public class Drivetrain extends Subsystem {
     private final CANTalon leftback = RobotMap.drivetrainleftback;
     private final CANTalon rightfront = RobotMap.drivetrainrightfront;
     private final CANTalon rightback = RobotMap.drivetrainrightback;
-    //private RobotDrive drive = RobotMap.drivetrainDrive;
-    RobotDrive drive = new RobotDrive(2,3,4,5);
+    private RobotDrive drive = RobotMap.drivetrainDrive;
+    //RobotDrive drive = new RobotDrive(2,3,4,5);
     public void initDefaultCommand() {
     	setDefaultCommand(new DriveWithJoysticks());
-    	drive = new RobotDrive(leftfront,leftback,rightfront,rightback);
+    	drive = new RobotDrive(leftback,rightfront,leftfront,rightback);
+    	//drive = new RobotDrive(leftfront,rightback,leftback,rightfront);
 	}
 	public void takeJoystickInputs(Joystick joystick1, Joystick joystick2) {
 		drive.tankDrive(joystick1.getY(), joystick2.getY());
@@ -26,6 +27,6 @@ public class Drivetrain extends Subsystem {
 		drive.tankDrive(0,0);
 	}
 	public void driveStraight(double d) {
-		drive.tankDrive(1.0, -1.0);	
+		drive.tankDrive(-0.75,-0.75);	
 	}
 }

@@ -12,8 +12,8 @@ public class Winch extends Subsystem {
     	setDefaultCommand(new WinchStop());
     }
     	public void up() {
-    		wheel.set(1.0);
-    		wheel1.set(1.0);
+    		wheel.set(-1.0);
+    		wheel1.set(-1.0);
     }
     	public void stop() {
     		wheel.set(0);

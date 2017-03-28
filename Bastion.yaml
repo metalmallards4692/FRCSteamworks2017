@@ -138,14 +138,14 @@ Children:
           default: Talon
           name: Type
           validators: null
-          value: Talon
+          value: VictorSP
         Output Channel (PWM): !!robotbuilder.data.properties.ChoicesProperty
           choices: &id004 ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10',
             '11', '12', '13', '14', '15', '16', '17', '18', '19']
           default: '0'
           name: Output Channel (PWM)
           validators: &id005 [PWMOutput]
-          value: '4'
+          value: '5'
       Base: Speed Controller
       Name: wheel
     - Children: []
@@ -155,13 +155,13 @@ Children:
           default: Talon
           name: Type
           validators: null
-          value: Talon
+          value: VictorSP
         Output Channel (PWM): !!robotbuilder.data.properties.ChoicesProperty
           choices: *id004
           default: '0'
           name: Output Channel (PWM)
           validators: *id005
-          value: '5'
+          value: '6'
       Base: Speed Controller
       Name: wheel1
     Properties:
@@ -223,9 +223,9 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: *id005
-          value: '6'
+          value: '8'
       Base: Speed Controller
-      Name: agitator
+      Name: spitpick
     - Children: []
       Properties:
         Type: !!robotbuilder.data.properties.ChoicesProperty
@@ -233,7 +233,7 @@ Children:
           default: Talon
           name: Type
           validators: null
-          value: Talon
+          value: VictorSP
         Output Channel (PWM): !!robotbuilder.data.properties.ChoicesProperty
           choices: *id004
           default: '0'
@@ -241,7 +241,7 @@ Children:
           validators: *id005
           value: '7'
       Base: Speed Controller
-      Name: spitpick
+      Name: agitator
     Properties:
       Default command parameters: !!robotbuilder.data.properties.ParametersProperty
         default: []

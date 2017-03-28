@@ -7,7 +7,11 @@ public class Autonomous extends CommandGroup {
     public Autonomous() {
     	
     	addSequential(new driveforward());
+<<<<<<< HEAD
     	//addSequential(new Spitgear());
+=======
+    	addSequential(new Spitgear());
+>>>>>>> origin/master
         // e.g. addSequential(new Command1());
         //      addSequential(new Command2());
         // these will run in order.

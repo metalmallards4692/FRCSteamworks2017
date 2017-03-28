@@ -78,6 +78,7 @@ Children:
         Right Rear Motor: !!robotbuilder.data.properties.ChildSelectionProperty
           default: 3
           name: Right Rear Motor
+<<<<<<< HEAD
           type: PIDOutput
           validators: [RobotDrive4, ChildDropdownSelected]
           value: Drivetrain right back
@@ -86,6 +87,16 @@ Children:
           name: Right Front Motor
           type: PIDOutput
           validators: [RobotDrive4, ChildDropdownSelected]
+=======
+          type: PIDOutput
+          validators: [RobotDrive4, ChildDropdownSelected]
+          value: Drivetrain right back
+        Right Front Motor: !!robotbuilder.data.properties.ChildSelectionProperty
+          default: 2
+          name: Right Front Motor
+          type: PIDOutput
+          validators: [RobotDrive4, ChildDropdownSelected]
+>>>>>>> origin/master
           value: Drivetrain right front
         Maximum Output: !!robotbuilder.data.properties.DoubleProperty {default: 1,
           name: Maximum Output, validators: null, value: 1.0}
@@ -145,7 +156,11 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: &id005 [PWMOutput]
+<<<<<<< HEAD
           value: '5'
+=======
+          value: '4'
+>>>>>>> origin/master
       Base: Speed Controller
       Name: wheel
     - Children: []
@@ -161,7 +176,11 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: *id005
+<<<<<<< HEAD
           value: '6'
+=======
+          value: '5'
+>>>>>>> origin/master
       Base: Speed Controller
       Name: wheel1
     Properties:
@@ -223,7 +242,11 @@ Children:
           default: '0'
           name: Output Channel (PWM)
           validators: *id005
+<<<<<<< HEAD
           value: '8'
+=======
+          value: '6'
+>>>>>>> origin/master
       Base: Speed Controller
       Name: spitpick
     - Children: []
